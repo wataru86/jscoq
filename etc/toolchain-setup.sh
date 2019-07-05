@@ -34,7 +34,7 @@ install_deps() {
   opam update
 
   # Workaround for problems with yojson
-  opam pin add -y ppx_deriving_yojson --dev
+  opam pin add -y ppx_deriving_yojson https://github.com/ocaml-ppx/ppx_deriving_yojson.git
 
   opam pin add -y -n --kind=path jscoq .
   opam install -y --deps-only $VERB -j $NJOBS jscoq
